@@ -45,6 +45,9 @@ class MowWizard extends PolymerElement {
   getIronPages() {
     return this.$.pages;
   }
+  getWizardHeader() {
+    return this.$.wizardHeader;
+  }
 }
 
 window.customElements.define('mow-wizard', MowWizard);
