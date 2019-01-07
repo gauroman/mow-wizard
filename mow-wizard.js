@@ -39,7 +39,7 @@ class MowWizard extends PolymerElement {
     };
   }
   addPage(page) {
-    document.createElement(page);
+    var child = document.createElement(page);
     this.$.content.appendChild(child);
   } 
 }
