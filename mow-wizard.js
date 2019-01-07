@@ -27,11 +27,6 @@ class MowWizard extends PolymerElement {
             width: 50%;
             margin: 0 auto;
         }
-        .dialog-content {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-        }
         @media screen and (max-width: 992px) {
             #wizardHeader {
                 width: 90%;
@@ -42,7 +37,7 @@ class MowWizard extends PolymerElement {
         }   
       </style>
       <wizard-header id="wizardHeader" steps='[[steps]]' on-item-tap="itemTap"></wizard-header>
-      <iron-pages id="pages" selected="[[wizardPage]]"></iron-pages>
+      <iron-pages id="wizardPage" selected="[[wizardPageSelected]]"></iron-pages>
     `;
   }
   static get properties() {
@@ -51,20 +46,20 @@ class MowWizard extends PolymerElement {
         type: Array,
         value: [],
       },
-      wizardPage: {
+      wizardPageSelected: {
         type: String,
         value: 0
       },
     };
   }
   addPage(page) {
-    this.$.pages.appendChild(page);
+    this.$.wizardPage.appendChild(page);
   }
   getSelectedPage() {
-    return this.$.pages.selected;
+    return this.$.wizardPage.selected;
   }
   getIronPages() {
-    return this.$.pages;
+    return this.$.wizardPage;
   }
   getWizardHeader() {
     return this.$.wizardHeader;
