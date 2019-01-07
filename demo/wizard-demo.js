@@ -23,8 +23,8 @@ class WizardDemo extends PolymerElement {
     }
     ready() {
         super.ready();
-
         this.$.wizard.steps = [{"label":"Step 1","content":"1"}, {"label":"Step 2","content":"2"}, {"label":"Step 3","content":"3"}];
+        this.$.wizard.wizardPage = 1;
     }  
 }
 

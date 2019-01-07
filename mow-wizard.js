@@ -21,7 +21,7 @@ class MowWizard extends PolymerElement {
         }
       </style>
       <wizard-header id="wizardHeader" steps='[[steps]]' on-item-tap="itemTap"></wizard-header>
-      <iron-pages>
+      <iron-pages selected="[[wizardPage]]">
         <content></content>
       </iron-pages>
     `;
