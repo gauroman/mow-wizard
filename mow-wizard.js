@@ -21,9 +21,7 @@ class MowWizard extends PolymerElement {
         }
       </style>
       <wizard-header id="wizardHeader" steps='[[steps]]' on-item-tap="itemTap"></wizard-header>
-      <iron-pages selected="[[wizardPage]]">
-        <content id="content"></content>
-      </iron-pages>
+      <iron-pages id="pages" selected="[[wizardPage]]"></iron-pages>
     `;
   }
   static get properties() {
@@ -40,7 +38,7 @@ class MowWizard extends PolymerElement {
   }
   addPage(page) {
     var child = document.createElement(page);
-    this.$.content.appendChild(child);
+    this.$.pages.appendChild(child);
   } 
 }
 
