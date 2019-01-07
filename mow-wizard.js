@@ -22,7 +22,7 @@ class MowWizard extends PolymerElement {
       </style>
       <wizard-header id="wizardHeader" steps='[[steps]]' on-item-tap="itemTap"></wizard-header>
       <iron-pages selected="[[wizardPage]]">
-        <content></content>
+        <content id="content"></content>
       </iron-pages>
     `;
   }
@@ -38,6 +38,10 @@ class MowWizard extends PolymerElement {
       },
     };
   }
+  addPage(page) {
+    document.createElement(page);
+    this.$.content.appendChild(child);
+  } 
 }
 
 window.customElements.define('mow-wizard', MowWizard);
