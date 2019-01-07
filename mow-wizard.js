@@ -19,6 +19,27 @@ class MowWizard extends PolymerElement {
         :host {
           display: block;
         }
+        #wizardHeader {
+            width: 50%;
+            margin: 0 auto;
+        }
+        #wizardPage {
+            width: 50%;
+            margin: 0 auto;
+        }
+        .dialog-content {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+        }
+        @media screen and (max-width: 992px) {
+            #wizardHeader {
+                width: 90%;
+            }
+            #wizardPage {
+                width: 90%;
+            }
+        }   
       </style>
       <wizard-header id="wizardHeader" steps='[[steps]]' on-item-tap="itemTap"></wizard-header>
       <iron-pages id="pages" selected="[[wizardPage]]"></iron-pages>
