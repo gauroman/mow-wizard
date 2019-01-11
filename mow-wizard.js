@@ -25,6 +25,7 @@ class MowWizard extends PolymerElement {
         }
         #wizardPage {
             width: 50%;
+            height: 100%;
             margin: 0 auto;
         }
         @media screen and (max-width: 992px) {
